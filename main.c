@@ -10,6 +10,9 @@
 #include "eeprom.h"
 #include "main.h"
 #include "config.h"
+#include "serial.h"
+
+#define _XTAL_FREQ 64000000
 
 void main(void) {
     TRISC=0x00;
@@ -20,6 +23,8 @@ void main(void) {
         PORTCbits.RC2=1;
         PORTCbits.RC4=1;
         //EEPROM_WriteByte('0','3');
+        SerialWrite('u');
+        __delay_ms(100);
     }
     
     return;

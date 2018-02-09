@@ -1,45 +1,121 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"8022 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f26k22.h
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-"6842
-[s S348 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S348 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"6852
-[s S349 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S349 . T1OSO T1OSI T5CKI SCK SDI SDO TX RX ]
-"6862
-[s S350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S350 . P2B P2A P1A SCL SDA . CK DT ]
-"6872
-[s S351 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S351 . T1CKI CCP2 CCP1 SCK1 SDI1 SDO1 TX1 RX1 ]
-"6882
-[s S352 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S352 . T3CKI . CTPLS SCL1 SDA1 . CK1 DT1 ]
-"6892
-[s S353 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S353 . T3G . AN14 AN15 AN16 AN17 AN18 AN19 ]
-"6902
-[s S354 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S354 . . CCP3 P3B ]
-"6907
-[s S355 :6 `uc 1 :1 `uc 1 ]
-[n S355 . . P3A ]
-"6911
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . . PA2 PA1 ]
-"6841
-[u S347 `S348 1 `S349 1 `S350 1 `S351 1 `S352 1 `S353 1 `S354 1 `S355 1 `S356 1 ]
-[n S347 . . . . . . . . . . ]
-"6917
-[v _PORTCbits `VS347 ~T0 @X0 0 e@3970 ]
-"7 serial.h
-[v _SerialWrite `(v ~T0 @X0 0 ef1`uc ]
-[v F6635 `(v ~T0 @X0 1 tf1`ul ]
-"164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
-[v __delay `JF6635 ~T0 @X0 0 e ]
-[p i __delay ]
+"95 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f26k22.h
+[v _ANSELB `Vuc ~T0 @X0 0 e@3897 ]
+"7811
+[s S381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S381 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"7821
+[s S382 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S382 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"7810
+[u S380 `S381 1 `S382 1 ]
+[n S380 . . . ]
+"7832
+[v _TRISBbits `VS380 ~T0 @X0 0 e@3987 ]
+"4453
+[s S209 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S209 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4463
+[s S210 :3 `uc 1 :1 `uc 1 ]
+[n S210 . . ADEN ]
+"4467
+[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S211 . RX9D2 OERR2 FERR2 ADDEN2 CREN2 SREN2 RX92 SPEN2 ]
+"4477
+[s S212 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S212 . RCD82 . RC8_92 ]
+"4482
+[s S213 :6 `uc 1 :1 `uc 1 ]
+[n S213 . . RC92 ]
+"4452
+[u S208 `S209 1 `S210 1 `S211 1 `S212 1 `S213 1 ]
+[n S208 . . . . . . ]
+"4487
+[v _RCSTA2bits `VS208 ~T0 @X0 0 e@3953 ]
+"4741
+[s S221 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S221 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"4751
+[s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S222 . TX9D2 TRMT2 BRGH2 SENDB2 SYNC2 TXEN2 TX92 CSRC2 ]
+"4761
+[s S223 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S223 . TXD82 . TX8_92 ]
+"4740
+[u S220 `S221 1 `S222 1 `S223 1 ]
+[n S220 . . . . ]
+"4767
+[v _TXSTA2bits `VS220 ~T0 @X0 0 e@3954 ]
+"4180
+[v _BAUDCON2 `Vuc ~T0 @X0 0 e@3952 ]
+"5058
+[v _SPBRG2 `Vuc ~T0 @X0 0 e@3957 ]
+"5096
+[v _SPBRGH2 `Vuc ~T0 @X0 0 e@3958 ]
+"4730
+[v _TXSTA2 `Vuc ~T0 @X0 0 e@3954 ]
+"4442
+[v _RCSTA2 `Vuc ~T0 @X0 0 e@3953 ]
+"16133
+[s S796 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S796 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16143
+[s S797 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S797 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16153
+[s S798 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S798 . . GIEL GIEH ]
+"16132
+[u S795 `S796 1 `S797 1 `S798 1 ]
+[n S795 . . . . ]
+"16159
+[v _INTCONbits `VS795 ~T0 @X0 0 e@4082 ]
+"9110
+[s S429 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S429 . TMR1GIE TMR3GIE TMR5GIE CTMUIE TX2IE RC2IE BCL2IE SSP2IE ]
+"9120
+[s S430 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S430 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ]
+"9127
+[s S431 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S431 . . RXBNIE . TXBNIE ]
+"9109
+[u S428 `S429 1 `S430 1 `S431 1 ]
+[n S428 . . . . ]
+"9134
+[v _PIE3bits `VS428 ~T0 @X0 0 e@4003 ]
+"15253
+[s S736 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S736 . SCS HFIOFS OSTS IRCF IDLEN ]
+"15260
+[s S737 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S737 . SCS0 SCS1 IOFS . IRCF0 IRCF1 IRCF2 ]
+"15252
+[u S735 `S736 1 `S737 1 ]
+[n S735 . . . ]
+"15270
+[v _OSCCONbits `VS735 ~T0 @X0 0 e@4051 ]
+"15196
+[s S734 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S734 . LFIOFS MFIOFS PRISD SOSCGO MFIOSEL . SOSCRUN PLLRDY ]
+"15195
+[u S733 `S734 1 ]
+[n S733 . . ]
+"15207
+[v _OSCCON2bits `VS733 ~T0 @X0 0 e@4050 ]
+"8271
+[s S395 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S395 . TUN PLLEN INTSRC ]
+"8276
+[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . TUN0 TUN1 TUN2 TUN3 TUN4 TUN5 ]
+"8270
+[u S394 `S395 1 `S396 1 ]
+[n S394 . . . ]
+"8285
+[v _OSCTUNEbits `VS394 ~T0 @X0 0 e@3995 ]
+"4982
+[v _TXREG2 `Vuc ~T0 @X0 0 e@3955 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6331,127 +6407,110 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;eeprom.h: 6: void EEPROM_WriteByte(unsigned char,unsigned char);
-[; ;eeprom.h: 7: unsigned char EEPROM_ReadByte(unsigned char);
-"22 config.h
-[p x FOSC=INTIO67 ]
-"23
-[p x PLLCFG=ON ]
-"24
-[p x PRICLKEN=ON ]
-"25
-[p x FCMEN=OFF ]
-"26
-[p x IESO=OFF ]
-"29
-[p x PWRTEN=OFF ]
-"30
-[p x BOREN=OFF ]
-"31
-[p x BORV=285 ]
-"34
-[p x WDTEN=ON ]
-"35
-[p x WDTPS=8192 ]
-"38
-[p x CCP2MX=PORTC1 ]
-"39
-[p x PBADEN=OFF ]
-"40
-[p x CCP3MX=PORTB5 ]
-"41
-[p x HFOFST=OFF ]
-"42
-[p x T3CMX=PORTC0 ]
-"43
-[p x P2BMX=PORTC0 ]
-"44
-[p x MCLRE=EXTMCLR ]
-"47
-[p x STVREN=OFF ]
-"48
-[p x LVP=OFF ]
-"49
-[p x XINST=OFF ]
-"52
-[p x CP0=ON ]
-"53
-[p x CP1=ON ]
-"54
-[p x CP2=ON ]
-"55
-[p x CP3=ON ]
-"58
-[p x CPB=ON ]
-"59
-[p x CPD=ON ]
-"62
-[p x WRT0=OFF ]
-"63
-[p x WRT1=OFF ]
-"64
-[p x WRT2=OFF ]
-"65
-[p x WRT3=OFF ]
-"68
-[p x WRTC=OFF ]
-"69
-[p x WRTB=OFF ]
-"70
-[p x WRTD=OFF ]
-"73
-[p x EBTR0=OFF ]
-"74
-[p x EBTR1=OFF ]
-"75
-[p x EBTR2=OFF ]
-"76
-[p x EBTR3=OFF ]
-"79
-[p x EBTRB=OFF ]
-[; ;serial.h: 5: void SerialInit(void);
-[; ;serial.h: 6: void OscTune(void);
-[; ;serial.h: 7: void SerialWrite(char);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"17 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+"3 serial.c
+[v _SerialInit `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 17: void main(void) {
-[e :U _main ]
+[; ;serial.c: 3: void SerialInit(){
+[e :U _SerialInit ]
 [f ]
-[; ;main.c: 18: TRISC=0x00;
+[; ;serial.c: 4: ANSELB = 0x00;
+"4
+[e = _ANSELB -> -> 0 `i `uc ]
+[; ;serial.c: 5: TRISBbits.RB6=1;
+"5
+[e = . . _TRISBbits 1 6 -> -> 1 `i `uc ]
+[; ;serial.c: 6: TRISBbits.RB7=1;
+"6
+[e = . . _TRISBbits 1 7 -> -> 1 `i `uc ]
+[; ;serial.c: 8: RCSTA2bits.CREN=1;
+"8
+[e = . . _RCSTA2bits 0 4 -> -> 1 `i `uc ]
+[; ;serial.c: 9: TXSTA2bits.SYNC=0;
+"9
+[e = . . _TXSTA2bits 0 4 -> -> 0 `i `uc ]
+[; ;serial.c: 10: RCSTA2bits.SPEN=1;
+"10
+[e = . . _RCSTA2bits 0 7 -> -> 1 `i `uc ]
+[; ;serial.c: 12: BAUDCON2 = 0x08;
+"12
+[e = _BAUDCON2 -> -> 8 `i `uc ]
+[; ;serial.c: 13: SPBRG2 = 0x82;
+"13
+[e = _SPBRG2 -> -> 130 `i `uc ]
+[; ;serial.c: 14: SPBRGH2 = 0x06;
+"14
+[e = _SPBRGH2 -> -> 6 `i `uc ]
+[; ;serial.c: 15: TXSTA2 = 0x24;
+"15
+[e = _TXSTA2 -> -> 36 `i `uc ]
+[; ;serial.c: 16: RCSTA2 = 0x90;
+"16
+[e = _RCSTA2 -> -> 144 `i `uc ]
+[; ;serial.c: 18: INTCONbits.GIE=1;
 "18
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 20: while(1){
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;serial.c: 19: INTCONbits.TMR0IE=1;
+"19
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;serial.c: 20: INTCONbits.TMR0IF=0;
 "20
-[e :U 826 ]
-{
-[; ;main.c: 22: PORTCbits.RC3=1;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;serial.c: 22: PIE3bits.RC2IE=1;
 "22
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 23: PORTCbits.RC2=1;
+[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+[; ;serial.c: 23: INTCONbits.PEIE=1;
 "23
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 24: PORTCbits.RC4=1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;serial.c: 24: INTCONbits.GIE=1;
 "24
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 26: SerialWrite('u');
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;serial.c: 26: }
 "26
-[e ( _SerialWrite (1 -> -> 117 `ui `uc ]
-[; ;main.c: 27: _delay((unsigned long)((100)*(64000000/4000.0)));
-"27
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"28
-}
-[e :U 825 ]
-"20
-[e $U 826  ]
-[e :U 827 ]
-[; ;main.c: 28: }
-[; ;main.c: 30: return;
-"30
-[e $UE 824  ]
-[; ;main.c: 31: }
-"31
 [e :UE 824 ]
+}
+"28
+[v _OscTune `(v ~T0 @X0 1 ef ]
+{
+[; ;serial.c: 28: void OscTune(){
+[e :U _OscTune ]
+[f ]
+[; ;serial.c: 29: OSCCONbits.IRCF = 0b111;
+"29
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
+[; ;serial.c: 30: OSCCONbits.SCS = 0b00;
+"30
+[e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
+[; ;serial.c: 31: OSCCON2bits.PLLRDY = 0b1;
+"31
+[e = . . _OSCCON2bits 0 7 -> -> 1 `i `uc ]
+[; ;serial.c: 32: OSCCON2bits.SOSCRUN = 0b0;
+"32
+[e = . . _OSCCON2bits 0 6 -> -> 0 `i `uc ]
+[; ;serial.c: 33: OSCTUNEbits.PLLEN = 0b1;
+"33
+[e = . . _OSCTUNEbits 0 1 -> -> 1 `i `uc ]
+[; ;serial.c: 35: }
+"35
+[e :UE 825 ]
+}
+"37
+[v _SerialWrite `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;serial.c: 37: void SerialWrite(char data){
+[e :U _SerialWrite ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;serial.c: 38: while(!TXSTA2bits.TRMT);
+"38
+[e $U 827  ]
+[e :U 828 ]
+[e :U 827 ]
+[e $ ! != -> . . _TXSTA2bits 0 1 `i -> -> -> 0 `i `Vuc `i 828  ]
+[e :U 829 ]
+[; ;serial.c: 39: TXREG2=data;
+"39
+[e = _TXREG2 _data ]
+[; ;serial.c: 40: }
+"40
+[e :UE 826 ]
 }

@@ -3,4 +3,5 @@
  main.c  \
 main.h  \
 config.h  \
-eeprom.h 
+eeprom.h  \
+serial.h 

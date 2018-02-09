@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "serial.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -8111,89 +8111,42 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 6 "eeprom.h"
-void EEPROM_WriteByte(unsigned char,unsigned char);
-unsigned char EEPROM_ReadByte(unsigned char);
+# 3 "serial.c"
+void SerialInit(){
+ANSELB = 0x00;
+TRISBbits.RB6=1;
+TRISBbits.RB7=1;
 
+RCSTA2bits.CREN=1;
+TXSTA2bits.SYNC=0;
+RCSTA2bits.SPEN=1;
 
-# 22 "config.h"
-#pragma config FOSC = INTIO67
-#pragma config PLLCFG = ON
-#pragma config PRICLKEN = ON
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
+BAUDCON2 = 0x08;
+SPBRG2 = 0x82;
+SPBRGH2 = 0x06;
+TXSTA2 = 0x24;
+RCSTA2 = 0x90;
 
+INTCONbits.GIE=1;
+INTCONbits.TMR0IE=1;
+INTCONbits.TMR0IF=0;
 
-#pragma config PWRTEN = OFF
-#pragma config BOREN = OFF
-#pragma config BORV = 285
+PIE3bits.RC2IE=1;
+INTCONbits.PEIE=1;
+INTCONbits.GIE=1;
 
-
-#pragma config WDTEN = ON
-#pragma config WDTPS = 8192
-
-
-#pragma config CCP2MX = PORTC1
-#pragma config PBADEN = OFF
-#pragma config CCP3MX = PORTB5
-#pragma config HFOFST = OFF
-#pragma config T3CMX = PORTC0
-#pragma config P2BMX = PORTC0
-#pragma config MCLRE = EXTMCLR
-
-
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = ON
-#pragma config CP1 = ON
-#pragma config CP2 = ON
-#pragma config CP3 = ON
-
-
-#pragma config CPB = ON
-#pragma config CPD = ON
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-
-# 5 "serial.h"
-void SerialInit(void);
-void OscTune(void);
-void SerialWrite(char);
-
-# 17 "main.c"
-void main(void) {
-TRISC=0x00;
-
-while(1){
-
-PORTCbits.RC3=1;
-PORTCbits.RC2=1;
-PORTCbits.RC4=1;
-
-SerialWrite('u');
-_delay((unsigned long)((100)*(64000000/4000.0)));
 }
 
-return;
+void OscTune(){
+OSCCONbits.IRCF = 0b111;
+OSCCONbits.SCS = 0b00;
+OSCCON2bits.PLLRDY = 0b1;
+OSCCON2bits.SOSCRUN = 0b0;
+OSCTUNEbits.PLLEN = 0b1;
+
+}
+
+void SerialWrite(char data){
+while(!TXSTA2bits.TRMT);
+TXREG2=data;
 }
